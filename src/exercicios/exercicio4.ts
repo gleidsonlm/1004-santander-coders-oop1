@@ -1,4 +1,5 @@
 class Titular {
+  token: string;
   constructor(private id: number, private nome: string, private cpf: string) {}
 }
 
