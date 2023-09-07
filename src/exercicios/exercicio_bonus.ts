@@ -188,3 +188,12 @@ console.log(pedidoLocal.calcularTotal());
 console.log(pedidoOnline.calcularTotal());
 
 console.log(valorTotalPedidos);
+
+function BaseParameters() {
+  return function <T extends { new (...args: any[]): {} }>(constructor: T) {
+    return class extends constructor {
+      id = Math.random();
+      createdAt = new Date();
+    };
+  };
+}
